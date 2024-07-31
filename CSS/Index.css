@@ -1,1 +1,29 @@
+header{
+    display: flex;
+	background-color: rgb(6, 112, 198);
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	margin-right: 10px;
+	background-size: cover;
+	background-position: center;
+}
+li{
+    display: inline-block;
+    margin: 24px;
+}
+a{
+    color: white;
+    font-weight: bold;
+}
+a:hover{
+    color: rgb(var(--light-gold-rgb));
+    transition: 0.3s all;
+}
+#Download{
+    margin-right: 20px;
+}
 
+body{
+    background-color: rgb(49, 70, 163);
+}
