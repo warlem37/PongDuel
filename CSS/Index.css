@@ -1,6 +1,7 @@
+                                                                                /* --- CABECALHO --- */
 header{
     display: flex;
-	background-color: rgb(6, 112, 198);
+	background-color: #0670c6;
 	flex-direction: row;
 	justify-content: space-between;
 	align-items: center;
@@ -10,12 +11,13 @@ header{
 }
 @font-face {
     font-family: MaximumVoltageItalic;
-    src: url(./Maximum\ Voltage\ Italic.ttf);
+    src: url(../FONTES/Maximum\ Voltage\ Italic.otf);
 }
 li{
     display: inline-block;
     margin: 24px;
 }
+
 a{
     color: white;
     font-weight: bold;
@@ -33,12 +35,22 @@ a:hover{
 	border-radius: 16px;
 	font-weight: bold;
     width: 180px;
-    background-color: rgb(231, 219, 40);
+    background-color: #d8670a;
 }
 #Download:hover{
-    background-color: aquamarine;
+    background-color: #ff7300;
     transition: 0.3s all;
 }
+#BtnDownload{
+    color: rgb(224, 224, 224);
+    font-size: 25px;
+}
+#TextoDownload:hover{
+    color: white;
+}
+
+                                                                                /* --- CORPO --- */
+
 body{
     background-color: rgb(49, 70, 163);
 }
