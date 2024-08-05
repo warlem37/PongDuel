@@ -1,25 +1,25 @@
-                                                                                /* --- CABECALHO --- */
+                                                        /* --- CABECALHO --- */
 header{
     display: flex;
-	background-color: #0670c6;
-	flex-direction: row;
-	justify-content: space-between;
-	align-items: center;
-	margin-right: 10px;
-	background-size: cover;
-	background-position: center;
-}
+    background-color: #e9bf03;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 10px;
+    background-size: cover;
+    background-position: center;
+    }
 @font-face {
     font-family: MaximumVoltageItalic;
-    src: url(../FONTES/Maximum\ Voltage\ Italic.otf);
+    src: url(../FONTES/Maximum\ Voltage\ Italic.ttf);
 }
 li{
-    display: inline-block;
-    margin: 24px;
+display: inline-block;
+margin: 24px;
 }
-
+                                                                                
 a{
-    color: white;
+    color: rgb(0, 0, 0);
     font-weight: bold;
 }
 a:hover{
@@ -31,14 +31,14 @@ a:hover{
     justify-content: center;
     margin-right: 24px;
     border: 2px solid rgb(0, 0, 0);
-	padding: 4px;
-	border-radius: 16px;
-	font-weight: bold;
+    padding: 4px;
+    border-radius: 16px;
+    font-weight: bold;
     width: 180px;
-    background-color: #d8670a;
+    background-color: #af4018;
 }
 #Download:hover{
-    background-color: #ff7300;
+    background-color: #ff5900;
     transition: 0.3s all;
 }
 #BtnDownload{
@@ -48,11 +48,11 @@ a:hover{
 #TextoDownload:hover{
     color: white;
 }
-
-                                                                                /* --- CORPO --- */
-
+                                                                                
+                                                        /* --- CORPO --- */
+                                                                                
 body{
-    background-color: rgb(49, 70, 163);
+    background-color: #FFCF00;
 }
 #titulo{
     display: flex;
@@ -61,10 +61,48 @@ body{
     margin-top: 150px;
     justify-content: center;
     align-items: center;
+    margin-bottom: 150px;
 }
 #TituloFonte{
     font-size: 150px;
     font-family: MaximumVoltageItalic;
+    color: black;
+    font-weight: bold;
+}
+.conteinerSlideshow{
+    max-width: 900px;
+    position: relative;
+    margin: auto;
+}
+.meuSlides{
+    display: none;
+}
+.antes, .proximo{
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
     color: white;
     font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+.proximo{
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+.antes:hover, .proximo:hover{
+    background-color: rgba(0, 0, 0, 0.8);
+}
+.fade{
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+@keyframes fade{
+    from{opacity: .4;}
+    to{opacity: 1;}
 }
