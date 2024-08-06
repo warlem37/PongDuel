@@ -1,14 +1,17 @@
                                                         /* --- CABECALHO --- */
 header{
     display: flex;
-    background-color: #e9bf03;
+    background-color: #ffd000;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    margin-right: 10px;
+    width: 100%;
     background-size: cover;
     background-position: center;
-    }
+}
+* {
+    box-sizing: border-box;
+}
 @font-face {
     font-family: MaximumVoltageItalic;
     src: url(../FONTES/Maximum\ Voltage\ Italic.ttf);
@@ -17,10 +20,13 @@ li{
 display: inline-block;
 margin: 24px;
 }
-                                                                                
+li:hover{
+    text-decoration: underline;
+}                                                                           
 a{
     color: rgb(0, 0, 0);
     font-weight: bold;
+    text-decoration: none;
 }
 a:hover{
     color: black;
@@ -30,29 +36,26 @@ a:hover{
     display: flex;
     justify-content: center;
     margin-right: 24px;
-    border: 2px solid rgb(0, 0, 0);
     padding: 4px;
     border-radius: 16px;
     font-weight: bold;
     width: 180px;
-    background-color: #af4018;
 }
 #Download:hover{
-    background-color: #ff5900;
     transition: 0.3s all;
 }
 #BtnDownload{
-    color: rgb(224, 224, 224);
+    color: rgb(0, 0, 0);
     font-size: 25px;
 }
-#TextoDownload:hover{
-    color: white;
+#BtnDownload:hover{
+    text-decoration: underline;
 }
                                                                                 
                                                         /* --- CORPO --- */
                                                                                 
 body{
-    background-color: #FFCF00;
+    background-color: #000000;
 }
 #titulo{
     display: flex;
@@ -66,8 +69,11 @@ body{
 #TituloFonte{
     font-size: 150px;
     font-family: MaximumVoltageItalic;
-    color: black;
+    color: #ffd000;
     font-weight: bold;
+}
+img{
+    vertical-align: middle;
 }
 .conteinerSlideshow{
     max-width: 900px;
@@ -103,6 +109,6 @@ body{
     animation-duration: 1.5s;
 }
 @keyframes fade{
-    from{opacity: .4;}
-    to{opacity: 1;}
+    from{opacity: .4}
+    to{opacity: 1}
 }
