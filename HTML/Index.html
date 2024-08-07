@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 
-                                                                                <!-- CORPO -->
+                                                                                <!-- HEAD -->
 
     <head>
         <meta charset="UTF-8">
@@ -15,14 +15,49 @@
                                                                                 <!-- CABECALHO -->
         <header>
             <ul>
-                <a href="#"><li>HOME</li></a>
-                <a href="#"><li>GUIA</li></a>
+                <a href="#"><li class="TextoHome">HOME</li></a>
+                <a href="#"><li class="TextoHome">GUIA</li></a>
             </ul>
 
             <article id="Download">
-                <a href="#" id="BtnDownload"><li id="TextoDownloadS">DOWNLOAD</li></a>
+                <a href="#" id="BtnDownload"><li id="TextoDownload">DOWNLOAD</li></a>
             </article>
         </header>
+
+                                                                                <!-- SCRIPT -->
+
+        <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+        showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+        showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("meuSlides");
+        let dots = document.getElementsByClassName("ponto");
+        if (n > slides.length) {
+            slideIndex = 1
+        }
+        if (n < 1) {
+            slideIndex = slides.length
+        }
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+        }
+        </script>
 
                                                                                 <!-- TELA PRINCIPAL -->
 
@@ -30,48 +65,34 @@
             <h1 id="TituloFonte">PONG DUEL</h1>
         </article>
 
+                                                                                <!-- SLIDESHOW -->
+
         <article class="conteinerSlideshow">
             <article class="meuSlides fade">
-                <img src="../IMAGENS/kiki.jpg" alt="slides1" style="width: 100%;">
+                <img src="../IMAGENS/img1.webp" alt="slides1" style="width: 100%;">
             </article>
 
             <article class="meuSlides fade">
-                <img src="../IMAGENS/jjk.jpg" alt="slides2" style="width: 100%;">
+                <img src="../IMAGENS/img2.jpg" alt="slides2" style="width: 100%;">
             </article>
 
             <article class="meuSlides fade">
-                <img src="../IMAGENS/chihiro.webp" alt="slide3" style="width: 100%;">
+                <img src="../IMAGENS/img3.jpg" alt="slide3" style="width: 100%;">
             </article>
             <a class="antes" onclick="plusSlides(-1)">&#10094</a>
             <a class="proximo" onclick="plusSlides(1)">&#10095</a>
         </article>
 
-        <script>
-            let slideIndex = 1;
-            showSlides(slideIndex);
+        <article style="text-align:center">
+            <span class="ponto" onclick="currentSlide(1)"></span>
+            <span class="ponto" onclick="currentSlide(2)"></span>
+            <span class="ponto" onclick="currentSlide(3)"></span>
+        </article>
 
-            function plusSlides(n){
-                showSlides(slideIndex += n);
-            }
+                                                                                <!-- DESCRICAO -->
 
-            function currentSlide(n) {
-                showSlides(slideIndex = n);
-            }
+        <article id="fundoDescricao">
 
-            function showSlides(n){
-                let i;
-                let slides = document.getElementsByClassName("meuSlides");
-                if(n > slides.length) {
-                    slidesIndex = 1
-                }
-                if (n < 1) {
-                    slidesIndex = slides.length
-                }
-                for (i = 0; i < slides.length; i++){
-                    slides[i].style.display = "none";
-                }
-                slides[slideIndex-1].style.display = "block";
-            }
-        </script>
+        </article>
     </body>
 </html>
