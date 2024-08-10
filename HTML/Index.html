@@ -16,11 +16,11 @@
         <header>
             <ul>
                 <a href="#"><li class="TextoHome">HOME</li></a>
-                <a href="#"><li class="TextoHome">GUIA</li></a>
+                <a href="#descricao"><li class="TextoHome">GUIA</li></a>
             </ul>
 
             <article id="Download">
-                <a href="#" id="BtnDownload"><li id="TextoDownload">DOWNLOAD</li></a>
+                <a href="#botaoDownload" id="BtnDownload"><li id="TextoDownload">DOWNLOAD</li></a>
             </article>
         </header>
 
@@ -66,33 +66,57 @@
         </article>
 
                                                                                 <!-- SLIDESHOW -->
+        <article id="fundo">
+            <article class="conteinerSlideshow">
+                <article class="meuSlides fade">
+                    <img src="../IMAGENS/img1.jpg" alt="slides1" style="width: 100%;">
+                </article>
 
-        <article class="conteinerSlideshow">
-            <article class="meuSlides fade">
-                <img src="../IMAGENS/img1.webp" alt="slides1" style="width: 100%;">
+                <article class="meuSlides fade">
+                    <img src="../IMAGENS/img2.jpg" alt="slides2" style="width: 100%;">
+                </article>
+
+                <article class="meuSlides fade">
+                    <img src="../IMAGENS/img3.jpg" alt="slide3" style="width: 100%;">
+                </article>
+                
+                <a class="antes" onclick="plusSlides(-1)">&#10094</a>
+                <a class="proximo" onclick="plusSlides(1)">&#10095</a>
             </article>
 
-            <article class="meuSlides fade">
-                <img src="../IMAGENS/img2.jpg" alt="slides2" style="width: 100%;">
+            <article style="text-align:center">
+                <span class="ponto" onclick="currentSlide(1)"></span>
+                <span class="ponto" onclick="currentSlide(2)"></span>
+                <span class="ponto" onclick="currentSlide(3)"></span>
             </article>
-
-            <article class="meuSlides fade">
-                <img src="../IMAGENS/img3.jpg" alt="slide3" style="width: 100%;">
-            </article>
-            <a class="antes" onclick="plusSlides(-1)">&#10094</a>
-            <a class="proximo" onclick="plusSlides(1)">&#10095</a>
-        </article>
-
-        <article style="text-align:center">
-            <span class="ponto" onclick="currentSlide(1)"></span>
-            <span class="ponto" onclick="currentSlide(2)"></span>
-            <span class="ponto" onclick="currentSlide(3)"></span>
-        </article>
 
                                                                                 <!-- DESCRICAO -->
 
-        <article id="fundoDescricao">
-
+        
+            <section id="descricao">
+                <h1>
+                    Em 2077 a tecnologia tomou conta do mundo e estava em todos lugar, 
+                    com tanta tecnologia os humanos brigavam por recursos naturais e 
+                    naturalmente criaram potências mundiais para a coleta de recursos, 
+                    por ganância uma das potências criou um vírus para deixar todos os 
+                    jogadores de um jogo que deveria prover a paz presos dentro do game, 
+                    mas nem tudo deu certo como planejavam e todos os humanos da Terra 
+                    ficaram presos no jogo por conta desse vírus, você consegue escapar dele ?
+                </h1>
+            </section>
         </article>
+
+                                                                                <!-- BOTAO DE DOWNLOAD -->
+
+        <article id="fundo2">
+            <section>
+                <a href="#"><h2 id="botaoDownload">DOWNLOAD</h2></a>
+            </section>
+        </article>
+
+                                                                                <!-- FOOTER -->
+        <footer>
+            <p>★ Site desenvolvido por Warlem ★</p>
+        </footer>
     </body>
 </html>
