@@ -1,4 +1,13 @@
+* {
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: MaximumVoltageItalic;
+    src: url(../FONTES/Maximum\ Voltage\ Italic.otf);
+}
+
                                                         /* --- CABECALHO --- */
+                                                        
 header{
     display: flex;
     background-color: #ffd000;
@@ -9,13 +18,7 @@ header{
     background-size: cover;
     background-position: center;
 }
-* {
-    box-sizing: border-box;
-}
-@font-face {
-    font-family: MaximumVoltageItalic;
-    src: url(../FONTES/Maximum\ Voltage\ Italic.otf);
-}
+
 li{
     display: inline-block;
     margin: 24px;
@@ -72,6 +75,9 @@ body{
     color: #ffd000;
     font-weight: bold;
 }
+
+                                                        /* --- SLIDESHOW --- */
+
 img{
     vertical-align: middle;
 }
@@ -102,7 +108,7 @@ img{
     border-radius: 3px 0 0 3px;
 }
 .antes:hover, .proximo:hover{
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: #d79317;
 }
 .fade{
     animation-name: fade;
@@ -119,9 +125,60 @@ img{
     margin: 0 2px;
     background-color: #ffd000;
     border-radius: 50%;
+    border: solid #d79317 1px;
     display: inline-block;
     transition: background-color 0.6s ease;
 }
 .active, .ponto:hover {
-    background-color: #717171;
+    background-color: #d79317;
   }
+
+                                                        /* --- DESCRIÇÃO --- */
+
+#fundo{
+    background-color: #ffd000;
+    width: 100%;
+    padding: 20px;
+}
+#descricao{
+    display: flex;
+    width: 70%;
+    text-align: justify;
+    margin-left: 14%;
+    font-size: 20px;
+}
+#fundo2{
+    margin-top: 20vh;
+    margin-bottom: 5vh;
+    display: flex;
+	justify-content: space-between;
+	background-position: center;
+    justify-content: center;
+}
+#botaoDownload{
+    color: white;
+    border: 2px solid #d79317;
+    background-color: #ffd000;
+	padding: 20px;
+	border-radius: 10px;
+	font-weight: bold;
+    
+}
+#botaoDownload:hover{
+    color: #d79317;
+    transition: 0.3s all;
+}
+h2{
+    font-family: MaximumVoltageItalic;
+    font-size: 60px;
+}
+
+                                                        /* --- FOOTER --- */
+
+footer{
+    color: #d79317;
+    display: flex;
+	border-top: 1px solid;
+	cursor: default;
+    justify-content: center;
+}
