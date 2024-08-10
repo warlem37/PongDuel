@@ -5,9 +5,13 @@
     font-family: MaximumVoltageItalic;
     src: url(../FONTES/Maximum\ Voltage\ Italic.otf);
 }
+@font-face {
+    font-family: font1;
+    src: url(../FONTES/TypoSlab\ Irregular\ Demo.otf);
+}
 
                                                         /* --- CABECALHO --- */
-                                                        
+
 header{
     display: flex;
     background-color: #ffd000;
@@ -21,7 +25,9 @@ header{
 
 li{
     display: inline-block;
-    margin: 24px;
+    margin: 20px;
+    font-family: font1;
+    font-size: 25px;
 }                                                                          
 a{
     color: rgb(0, 0, 0);
