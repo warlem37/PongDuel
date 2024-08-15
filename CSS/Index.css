@@ -64,7 +64,39 @@ a:hover{
                                                         /* --- CORPO --- */
                                                                                 
 body{
-    background-color: #000000;
+    background-color: #121212;
+}
+#P1{
+    position: absolute;
+    top: 15vh;
+}
+#P2{
+    position: absolute;
+    top: 50vh;
+    left: 94%;
+}
+#Bola4{
+    position:absolute;
+    opacity: 10%;
+    top: 43vh;
+    left: 102vh;
+}
+#Bola3{
+    position:absolute;
+    opacity: 30%;
+    top: 45vh;
+    left: 100vh;
+}
+#Bola2{
+    position:absolute;
+    opacity: 40%;
+    top: 47vh;
+    left: 98vh;
+}
+#Bola1{
+    position:absolute;
+    top: 49vh;
+    left: 96vh;
 }
 #titulo{
     display: flex;
@@ -80,6 +112,7 @@ body{
     font-family: MaximumVoltageItalic;
     color: #ffd000;
     font-weight: bold;
+    cursor:default;
 }
 
                                                         /* --- SLIDESHOW --- */
