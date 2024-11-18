@@ -1,130 +1,101 @@
 <!DOCTYPE html>
 <html>
 
-                                                                                <!-- HEAD -->
+<!--//////////////////////////////////////////////////////// HEAD ////////////////////////////////////////////////////////-->
 
     <head>
-        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../CSS/index.css">
+        <meta>
         <title>Pong Duel</title>
-        <link rel="stylesheet" href="../CSS/Index.css">
     </head>
 
-                                                                                <!-- CORPO -->
+<!--//////////////////////////////////////////////////////// BODY ////////////////////////////////////////////////////////-->
 
     <body>
-                                                                                <!-- CABECALHO -->
-        <header>
-            <ul>
-                <a href="#"><li class="TextoHome">HOME</li></a>
-                <a href="#descricao"><li class="TextoHome">GUIA</li></a>
-            </ul>
 
-            <article id="Download">
-                <a href="#botaoDownload" id="BtnDownload"><li id="TextoDownload">DOWNLOAD</li></a>
-            </article>
+        <header>
+            <a href="#"><h1 id="NomeEmpresa">Pong Duel</h1></a>
+
+            <ul>
+                <a href="#segmento1"><li>História</li></a>
+                <a href="https://scratch.mit.edu/projects/1094670057"><li>Jogar</li></a>
+            </ul>
         </header>
 
-                                                                                <!-- SCRIPT -->
+        <article id="bloco1" style="background-color: black;">
+            <h1 style="color: white;" id="mid"> Pong Duel </h1>
+
+            <img src="../IMAGENS/P1.png" alt="player1" id="P1" style="height: 200px;">
+            <img src="../IMAGENS/P2.png" alt="player2" id="P2" style="height: 200px;">
+
+            <img src="../IMAGENS/Bola.png" alt="bola" id="Bola" style="height: 200px;">
+            <img src="../IMAGENS/Bola.png" alt="bola" id="Bola2" style="height: 200px;">
+            <img src="../IMAGENS/Bola.png" alt="bola" id="Bola3" style="height: 200px;">
+            <img src="../IMAGENS/Bola.png" alt="bola" id="Bola4" style="height: 200px;">
+        </article>
+
+        <div class="slideshow-container">
+
+            <div class="mySlides fade">
+                <img src="../IMAGENS/Captura de Tela (3).png" alt="fotojogo1" width="100%" height="500px">
+            </div>
+
+            <div class="mySlides fade">
+                <iframe src="file:///C:/Users/Aluno/Desktop/3%C2%BAIPI/C%C3%B3pia%20de%20GDD%20(1).pdf" width="100%" height="500px" style="border: none;"></iframe>
+            </div>
+
+            <div class="mySlides fade">
+                <img src="../IMAGENS/Captura de Tela (1).png" alt="fotojogo2" width="100%" height="500px">
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
+
+        </div>
+        <br>
+
+        <article id="segmento1">
+            <h1 class="Titulo">História</h1>
+            <p id="SubTitulo">
+                Em 2077 a tecnologia tomou conta do mundo e estava em todos lugar, com tanta tecnologia os humanos brigavam por 
+                recursos naturais e naturalmente criaram potências mundiais para a coleta de recursos, por ganância uma das potências 
+                criou um vírus para deixar todos os jogadores de um jogo que deveria prover a paz presos dentro do game, 
+                mas nem tudo deu certo como planejavam e todos os humanos da Terra ficaram presos no jogo por conta desse vírus, 
+                você consegue escapar dele ?
+            </p>
+        </article>
+
+<!--//////////////////////////////////////////////////////// SCRIPT ////////////////////////////////////////////////////////-->
 
         <script>
-        let slideIndex = 1;
-        showSlides(slideIndex);
+            let slideIndex = 1;
+            showSlides(slideIndex);
 
-        function plusSlides(n) {
-        showSlides(slideIndex += n);
-        }
+            function plusSlides(n) {
+            showSlides(slideIndex += n);
+            }
 
-        function currentSlide(n) {
-        showSlides(slideIndex = n);
-        }
+            function currentSlide(n) {
+            showSlides(slideIndex = n);
+            }
 
-        function showSlides(n) {
-        let i;
-        let slides = document.getElementsByClassName("meuSlides");
-        let dots = document.getElementsByClassName("ponto");
-        if (n > slides.length) {
-            slideIndex = 1
-        }
-        if (n < 1) {
-            slideIndex = slides.length
-        }
-        for (i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";
-        }
-        for (i = 0; i < dots.length; i++) {
-            dots[i].className = dots[i].className.replace(" active", "");
-        }
-        slides[slideIndex-1].style.display = "block";
-        dots[slideIndex-1].className += " active";
-        }
+            function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            if (n > slides.length) {slideIndex = 1}    
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+            slides[slideIndex-1].style.display = "block";  
+            }
         </script>
 
-                                                                                <!-- TELA PRINCIPAL -->
-
-        <article id="titulo">
-            <h1 id="TituloFonte">PONG DUEL</h1>
-        </article>
-        <img src="../IMAGENS/P1.png" alt="p1" style="height: 200px;" id="P1">
-        <img src="../IMAGENS/P2.png" alt="p2" style="height: 200px;" id="P2">
-        
-        <img src="../IMAGENS/Bola.png" alt="bola" style="height: 200px;" id="Bola4">
-        <img src="../IMAGENS/Bola.png" alt="bola" style="height: 200px;" id="Bola3">
-        <img src="../IMAGENS/Bola.png" alt="bola" style="height: 200px;" id="Bola2">
-        <img src="../IMAGENS/Bola.png" alt="bola" style="height: 200px;" id="Bola1">
-
-                                                                                <!-- SLIDESHOW -->
-        <article id="fundo">
-            <article class="conteinerSlideshow">
-                <article class="meuSlides fade">
-                    <img src="../IMAGENS/img1.jpg" alt="slides1" style="width: 100%;">
-                </article>
-
-                <article class="meuSlides fade">
-                    <img src="../IMAGENS/img2.jpg" alt="slides2" style="width: 100%;">
-                </article>
-
-                <article class="meuSlides fade">
-                    <img src="../IMAGENS/img3.jpg" alt="slide3" style="width: 100%;">
-                </article>
-                
-                <a class="antes" onclick="plusSlides(-1)">&#10094</a>
-                <a class="proximo" onclick="plusSlides(1)">&#10095</a>
-            </article>
-
-            <article style="text-align:center">
-                <span class="ponto" onclick="currentSlide(1)"></span>
-                <span class="ponto" onclick="currentSlide(2)"></span>
-                <span class="ponto" onclick="currentSlide(3)"></span>
-            </article>
-
-                                                                                <!-- DESCRICAO -->
-
-        
-            <section id="descricao">
-                <h1>
-                    Em 2077 a tecnologia tomou conta do mundo e estava em todos lugar, 
-                    com tanta tecnologia os humanos brigavam por recursos naturais e 
-                    naturalmente criaram potências mundiais para a coleta de recursos, 
-                    por ganância uma das potências criou um vírus para deixar todos os 
-                    jogadores de um jogo que deveria prover a paz presos dentro do game, 
-                    mas nem tudo deu certo como planejavam e todos os humanos da Terra 
-                    ficaram presos no jogo por conta desse vírus, você consegue escapar dele ?
-                </h1>
-            </section>
-        </article>
-
-                                                                                <!-- BOTAO DE DOWNLOAD -->
-
-        <article id="fundo2">
-            <section>
-                <a href="#"><h2 id="botaoDownload">DOWNLOAD</h2></a>
-            </section>
-        </article>
-
-                                                                                <!-- FOOTER -->
-        
         <footer>
-            <p>★ Site desenvolvido por Warlem ★</p>
+            <p>
+                Site desenvolvido pela equipe Pong Duel
+            </p>
         </footer>
     </body>
-</html>
+</html> 
