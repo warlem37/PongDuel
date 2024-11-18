@@ -1,5 +1,5 @@
 * {
-    box-sizing: border-box;
+    box-sizing: border-box
 }
 @font-face {
     font-family: MaximumVoltageItalic;
@@ -10,214 +10,181 @@
     src: url(../FONTES/TypoSlab\ Irregular\ Demo.otf);
 }
 
-                                                        /* --- CABECALHO --- */
+/* --- //////////////////////////////////////////////////////// BODY //////////////////////////////////////////////////////// --- */
+
+body {
+    font-family: Verdana, sans-serif; 
+    margin:0;
+    background-color: #FFD101;
+}
+#segmento1{
+    background-color: white;
+    margin-bottom: 30px;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    margin-left: 5%;
+    border: solid black 1px;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: rgba(0, 0, 0, 0.4) 5px 5px, rgba(28, 28, 28, 0.3) 10px 10px, rgba(89, 89, 89, 0.2) 15px 15px, rgba(142, 142, 142, 0.1) 20px 20px, rgba(220, 220, 220, 0.05) 25px 25px;
+}
+.Titulo{
+    font-weight: bold;
+    font-family: font1;
+    font-size: 50px;
+}
+#mid{
+    margin: 20px;
+    font-size: 100px;
+    padding-top: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 50%;
+    font-family: MaximumVoltageItalic;
+}
+#SubTitulo{
+    font-size: 20px;
+    justify-content: center;
+}
+
+/* --- //////////////////////////////////////////////////////// HEADER //////////////////////////////////////////////////////// --- */
 
 header{
-    display: flex;
-    background-color: #ffd000;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+    background-color: #FFD101;
     width: 100%;
-    background-size: cover;
-    background-position: center;
+    height: 50px;
+    display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+    font-family: font1;
+}
+
+a{
+    color: black;
+    text-decoration: none;
 }
 
 li{
     display: inline-block;
-    margin: 20px;
-    font-family: font1;
-    font-size: 25px;
-}                                                                          
-a{
-    color: rgb(0, 0, 0);
-    font-weight: bold;
-    text-decoration: none;
+    margin-left: 10px;
 }
-a:hover{
-    color: black;
-    transition: 0.3s all;
+
+ul{
+    margin-right: 20px;
 }
-#Download{
+
+#NomeEmpresa{
     display: flex;
+    display: inline-block;
+    color: black;
+    font-size: 28px;
+    font-family: MaximumVoltageItalic;
+    margin-left: 10px;
+}
+#bloco1{
+    margin-top: -20px;
+    height: 60vh;
     justify-content: center;
-    margin-right: 24px;
-    padding: 4px;
-    border-radius: 16px;
-    font-weight: bold;
-    width: 180px;
-}
-#Download:hover{
-    transition: 0.3s all;
-}
-#BtnDownload{
-    color: rgb(0, 0, 0);
-    font-size: 25px;
-}
-#TextoDownload:hover{
-    text-decoration: underline black 5px;
-}
-.TextoHome:hover{
-    text-decoration: underline black 5px;
-}
-                                                                                
-                                                        /* --- CORPO --- */
-                                                                                
-body{
-    background-color: #121212;
+    align-items: center;
 }
 #P1{
     position: absolute;
-    top: 15vh;
+    right: 90%;
+
 }
 #P2{
     position: absolute;
-    top: 50vh;
-    left: 94%;
+    left: 90%;
+    top: 10%;
 }
-#Bola4{
-    position:absolute;
-    opacity: 10%;
-    top: 43vh;
-    left: 102vh;
-}
-#Bola3{
-    position:absolute;
-    opacity: 30%;
-    top: 45vh;
-    left: 100vh;
+#Bola{
+    position: absolute;
+    left: 50%;   
 }
 #Bola2{
-    position:absolute;
-    opacity: 40%;
-    top: 47vh;
-    left: 98vh;
+    position: absolute;
+    left: 50.5%;
+    top: 35%;
+    rotate: 10deg;
+    opacity: 0.5;
 }
-#Bola1{
-    position:absolute;
-    top: 49vh;
-    left: 96vh;
+#Bola3{
+    position: absolute;
+    left: 51%;   
+    top: 34%;
+    rotate: 30deg;
+    opacity: 0.3;
 }
-#titulo{
-    display: flex;
-    width: 100%;
-    height: 300px;
-    margin-top: 150px;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 150px;
-}
-#TituloFonte{
-    font-size: 150px;
-    font-family: MaximumVoltageItalic;
-    color: #ffd000;
-    font-weight: bold;
-    cursor:default;
+#Bola4{
+    position: absolute;
+    left: 51.5%;
+    rotate: 60deg;
+    top: 33%;
+    opacity: 0.1;
 }
 
-                                                        /* --- SLIDESHOW --- */
 
-img{
-    vertical-align: middle;
-}
-.conteinerSlideshow{
-    max-width: 900px;
-    position: relative;
-    margin: auto;
-}
-.meuSlides{
+/* --- //////////////////////////////////////////////////////// SLIDESHOW //////////////////////////////////////////////////////// --- */
+
+.mySlides {
     display: none;
 }
-.antes, .proximo{
+
+img {
+    vertical-align: middle;
+}
+
+.slideshow-container {
+    position: relative;
+}
+
+.prev, .next {
     cursor: pointer;
     position: absolute;
     top: 50%;
     width: auto;
-    margin-top: -22px;
     padding: 16px;
+    margin-top: -22px;
     color: white;
     font-weight: bold;
     font-size: 18px;
     transition: 0.6s ease;
     border-radius: 0 3px 3px 0;
     user-select: none;
+    background-color: rgba(0,0,0,0.8);
 }
-.proximo{
+
+.next {
     right: 0;
     border-radius: 3px 0 0 3px;
 }
-.antes:hover, .proximo:hover{
-    background-color: #d79317;
-}
-.fade{
+
+.fade {
     animation-name: fade;
     animation-duration: 1.5s;
 }
-@keyframes fade{
-    from{opacity: .4}
-    to{opacity: 1}
-}
-.ponto{
-    cursor: pointer;
-    height: 15px;
-    width: 15px;
-    margin: 0 2px;
-    background-color: #ffd000;
-    border-radius: 50%;
-    border: solid #d79317 1px;
-    display: inline-block;
-    transition: background-color 0.6s ease;
-}
-.active, .ponto:hover {
-    background-color: #d79317;
-  }
 
-                                                        /* --- DESCRIÇÃO --- */
-
-#fundo{
-    background-color: #ffd000;
-    width: 100%;
-    padding: 20px;
-}
-#descricao{
-    display: flex;
-    width: 70%;
-    text-align: justify;
-    margin-left: 14%;
-    font-size: 20px;
-}
-#fundo2{
-    margin-top: 20vh;
-    margin-bottom: 5vh;
-    display: flex;
-	justify-content: space-between;
-	background-position: center;
-    justify-content: center;
-}
-#botaoDownload{
-    color: white;
-    border: 2px solid #d79317;
-    background-color: #ffd000;
-	padding: 20px;
-	border-radius: 10px;
-	font-weight: bold;
-    
-}
-#botaoDownload:hover{
-    color: #d79317;
-    transition: 0.3s all;
-}
-h2{
-    font-family: MaximumVoltageItalic;
-    font-size: 60px;
+@keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
 }
 
-                                                        /* --- FOOTER --- */
+@media only screen and (max-width: 300px) {
+    .prev, .next,.text {font-size: 11px}
+}
+
+hr{
+    top: 50px;
+}
 
 footer{
-    color: #d79317;
     display: flex;
-	border-top: 1px solid;
-	cursor: default;
     justify-content: center;
+    align-items: center;
+    background-color: black;
+    color: white;
 }
